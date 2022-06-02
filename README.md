@@ -18,3 +18,8 @@
 (TELA PESQUISA DE CIDADES)
 
 ![tela de cidades](https://user-images.githubusercontent.com/105746963/171552200-5ae8e61f-b086-44b6-be64-31a1f214d71f.JPG)
+
+
+(TELA REGISTRO DE TÍTULOS)
+
+![tela de titulos](https://user-images.githubusercontent.com/105746963/171615765-acddba30-5453-4930-b52c-ec2cb80fe6a7.JPG)
