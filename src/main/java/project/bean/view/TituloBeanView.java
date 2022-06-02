@@ -20,7 +20,7 @@ import project.model.classes.Titulo;
 import project.util.all.Menssagens;
 
 @Controller
-@Scope("view")
+@Scope("session")
 @ManagedBean(name = "funcionarioBeanView")
 public class TituloBeanView extends BeanManagedViewAbstract{
 

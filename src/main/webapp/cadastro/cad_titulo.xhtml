@@ -12,7 +12,7 @@
 <ui:composition template="/templates/templatePrincipal.xhtml">
 	<ui:define name="corpo">
 		<h:form id="formCadastro" prependId="false">
-			<p:panel header="Cadastro de titulo" id="panelCadastro">
+			<p:panel header="Cadastro de título" id="panelCadastro">
 				<p:panelGrid id="gridFunc" columns="3">
 					<p:column>
 						<p:row>
@@ -180,7 +180,7 @@
 		</h:form>
 
 		<p:dataTable id="tableResult" value="#{tituloBeanView.list.list}"
-			var="objeto">
+			var="objeto" emptyMessage="Não existem valores para exibição.">
 			<ui:include src="/resources/components/colunasDataTableTitulo.xhtml" />
 		</p:dataTable>
 
