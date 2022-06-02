@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory name="sessionFactory">
+		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+		<property name="hibernate.connection.datasource">java:/comp/env/jdbc/datasource</property>
+		<property name="hibernate.default.schema">public</property>
+		<property name="hibernate.current_session_context_class">thread</property>
+		<property name="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
+		<property name="hibernate.jdbc.batch_size">100</property> <!--  máximo de transações por lote -->
+		<property name="hibernate.jdbc.factory_class">org.hibernate.jdbc.NonBatchingBatcherFactory</property> <!-- desabilita execução dos dados em lote -->
+		<property name="hibernate.cache.use_second_cache">true</property>
+		<property name="hibernate.transaction.auto_close_session">true</property>
+		<property name="hibernate.hbm2ddl.auto">update</property> <!-- cria as tabelas e campos automaticamente -->
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.format_sql">true</property>
+		<property name="hibernate.generate_statistics">false</property> <!-- carrega estatísticas da performance dos sqls -->
+		<property name="hibernate.use_sql_comments">false</property>
+		<property name="hibernate.connection.autocommit">false</property>
+		<property name="hibernate.connection.pool_size">50</property>
+		
+		<mapping class="project.model.classes.Entidade"/>
+		<mapping class="project.model.classes.Pais"/>
+		<mapping class="project.model.classes.Estado"/>
+		<mapping class="project.model.classes.Cidade"/>
+		<mapping class="project.model.classes.Mensagem"/>
+		<mapping class="project.model.classes.Titulo"/>
+		
+		
+		
+		<listener class="org.hibernate.envers.event.AuditEventListener" type="post-insert"/>
+		<listener class="org.hibernate.envers.event.AuditEventListener" type="post-update"/>
+		<listener class="org.hibernate.envers.event.AuditEventListener" type="post-delete"/>
+		<listener class="org.hibernate.envers.event.AuditEventListener" type="post-collection-recreate"/>
+		<listener class="org.hibernate.envers.event.AuditEventListener" type="pre-collection-remove"/>
+		<listener class="org.hibernate.envers.event.AuditEventListener" type="pre-collection-update"/>
+		
+		
+		
+	</session-factory>
+</hibernate-configuration>
