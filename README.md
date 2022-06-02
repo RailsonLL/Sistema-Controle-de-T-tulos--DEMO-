@@ -4,7 +4,7 @@
  
  Este é um sistema para demonstração de implementação de algumas tecnologias Java Web.
  
- O sistema incluí:
+ O sistema inclui:
  * Registro de Funcionário, Cidades e Títulos;
  * Filtros de pesquisa dinâmicos;
  * Impressão em PDF;
@@ -14,4 +14,7 @@
  * Otimização do CRUD com JPA;
  * No Back-end implementado o Spring Framework com injeção de depenência, controle de transações, arquitetura MVC;
 
-(TELA CADASTRO DE PROFESSORES)
+
+(TELA PESQUISA DE CIDADES)
+
+![tela de cidades](https://user-images.githubusercontent.com/105746963/171552200-5ae8e61f-b086-44b6-be64-31a1f214d71f.JPG)
